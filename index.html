@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Интернет-магазин</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="Lorem ipsum dolor sit amet.">
+	<meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, eum, facere dolor repellat asperiores deleniti!">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script> 
+	<script type="text/javascript" src="js/raphael-min.js"></script>
+	<script type="text/javascript" src="js/jquery.ratemate.js"></script> 	
+
+</head>
+<body>
+	
+<!-- HEADER -->  
+	<header class="main-header section">
+		<div class="container">
+		
+			<!-- LOGO -->
+			<div class="logo left">
+				<div class="logo__image left">
+					<a href="index.html"><img src="image/logo.png" alt="Логотип"></a>
+				</div>
+				<span class="logo__name">Интернет магазин</span><br>
+				<span class="logo__slogan">самый лучший</span>
+			</div>
+			
+			<!-- AUTHORIZATION FORM  --> 
+			<div class="authorization right">
+				<form class="login-form" name="loginForm">
+					<input class="login-form__input" type="text" name="username" id="username" placeholder="Введите логин" required><br>							
+					<input class="login-form__input" type="password" name="password" id="password" placeholder="Введите пароль" required><br>
+					<button class="login-form__button login-form__button_focused left" id="login">Войти</button>
+					<button class="login-form__button login-form__button_focused right" id="register">Регистрация</button>
+				</form>
+				<div class="authorization__prompt">
+					<p id="success">
+						Авторизация прошла успешно.
+						<br>Добро пожаловать, 
+						<span class="form-text"></span>
+					</p>
+				</div>
+				<div class="authorization__prompt_error error">
+					<p id="errorEmptyField">Заполните поля для<br>авторизации</p>
+					<p id="errorUsername">Пользователь с таким<br>именем уже существует</p>
+					<p id="errorPassword">Неверно введен<br>логин или пароль</p>
+					<p id="errorRegistration">Ошибка авторизации.<br>Попробуйте снова.</p>
+				</div>
+			</div>
+			
+		</div>
+	</header>
+
+<!-- CONTENT -->
+	<main class="main-content">
+		<div class="container">
+			<div class="row">
+				<div class="catalog">
+					<h1 class="catalog__title">Каталог товаров</h1>
+					<ul class="product-list">
+						<!-- 
+						<li class="product-item">product1
+							<div class="product-image">
+								<img src="" width="116" height="108" alt="Product">
+							</div>
+						</li>
+						<li class="product-item">product2
+							<div class="product-image">
+								<img src="image/" width="116" height="108" alt="Product">
+							</div>
+						</li> 
+						-->
+					</ul>
+					<div class="col-md-6 col-sm-6">
+						<div class="catalog__product catalog__product_error left error">
+							<div class="product-info">
+								<!-- 
+								<div class="product" id="product-id">
+									<h3 class="product__caption"></h3>
+									<img src="" width="232" height="217" alt="Product">
+									<p class="product__description"></p> 
+								</div> 
+								-->
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<div class="comment right">
+			
+							<form class="reviewForm clearfix" method="post">
+								<input class="rateStar" max="5" min="0" type="number" value="0">
+								
+								<div class="reviewForm__prompt_error error">
+									<p id="emptyField">Заполните поле для отправки отзыва</p>
+									<p id="tokenUndefined">Чтобы оставить отзыв о продукте вам необходимо зарегистрироваться</p>
+									<p id="errorMsgSubmit">Ошибка отправки отзыва на сервер</p>
+								</div>
+								<div class="reviewForm__prompt">
+									<p id="msgSubmit">Спасибо за ваш отзыв</p>
+								</div>
+								
+								<textarea class="reviewForm__textarea" name="review" id="review" placeholder="Оставте свой отзыв"></textarea>
+								<button class="reviewForm__button reviewForm__button_focused">Добавить отзыв</button>
+							</form>
+							<div class="comment-content">
+								<!-- 
+								<div class="product-details">
+									<div class="product-details">
+										<p class="created"><span class="time"></span></p>
+										<p class="rate">Rate: <span></span></p>
+										<p class="comment-text">Comment: <span></span></p>
+									</div>
+								</div>
+								 -->
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</main>
+
+<!-- FOOTER -->
+	<footer class="main-footer section">
+		<div class="container">
+		    <div class="row">
+			
+				<div class="col-md-8 col-sm-6">
+					<div class="rights">
+						<p>Created agency © 2017. All rights reserved</p>
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="social">
+						<p>Вы можете найти нас в социальных сетях:</p>
+						<ul class="social__list social-icons">
+							<li class="social__item"><a class="social__link social__link_focused" href="https://www.facebook.com"><i class="ion-social-facebook"></i></a></li>
+							<li class="social__item"><a class="social__link social__link_focused" href="https://twitter.com"><i class="ion-social-twitter"></i></a></li>
+							<li class="social__item"><a class="social__link social__link_focused" href="https://www.pinterest.com"><i class="ion-social-pinterest"></i></a></li>
+							<li class="social__item"><a class="social__link social__link_focused" href="https://www.instagram.com"><i class="ion-social-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
